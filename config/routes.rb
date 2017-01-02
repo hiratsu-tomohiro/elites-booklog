@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'books/index'
   root to: 'books#index'
+  resources :books
+  
   devise_for :users
   
   if Rails.env.development?
