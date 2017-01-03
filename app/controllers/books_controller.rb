@@ -2,6 +2,7 @@ class BooksController < ApplicationController
   # 「index」,「show」以外のアクションはログインが必要
   before_action :authenticate_user!, except: [:index, :show]
   def index
+    @books = Book.order('updated_at DESC')
   end
   
   def show
