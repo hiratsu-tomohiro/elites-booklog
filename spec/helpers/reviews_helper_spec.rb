@@ -24,5 +24,9 @@ RSpec.describe ReviewsHelper, type: :helper do
       expect(review_average([create(:review, rank: 3), create(:review, rank: 4)])).to eq 3.5
     end
     
+    it "レビューがある場合は、その平均点を四捨五入で返す(小数２位まであり)" do
+      expect(review_average([create(:review, rank: 2), create(:review, rank: 4), create(:review, rank: 5)])).to eq 3.67
+    end
+    
   end
 end
