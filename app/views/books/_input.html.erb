@@ -52,7 +52,8 @@
         <%= f.file_field :image %>
         <%= f.hidden_field :image_cache %>
       </div>
-
+      
+      <!--seedのマスターデータを参照して選択リスト表示-->
       <div class="form-group">
         <%= f.label :category %><br/>
         <%= f.collection_select :category_id, Category.all, :id, :name %>
