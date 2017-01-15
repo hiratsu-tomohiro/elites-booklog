@@ -17,43 +17,14 @@
       <hr>
   <% end %>
 
-  <ul class="category-list">
-    <li class="category-tag"><%= link_to '文学・評論', root_path(ft: '1') %></li>
-    <li class="category-tag"><%= link_to '人文・思想', root_path(ft: '2') %></li>
-    <li class="category-tag"><%= link_to '社会・政治･法律', root_path(ft: '3') %></li>
-    <li class="category-tag"><%= link_to 'ノンフィクション', root_path(ft: '4') %></li>
-    <li class="category-tag"><%= link_to '歴史・地理', root_path(ft: '5') %></li>
-    <li class="category-tag"><%= link_to 'ビジネス・経済', root_path(ft: '6') %></li>
-    <li class="category-tag"><%= link_to '投資・金融・会社経営', root_path(ft: '7') %></li>
-    <li class="category-tag"><%= link_to '科学・テクノロジー', root_path(ft: '8') %></li>
-    <li class="category-tag"><%= link_to '医学・薬学・看護学・歯科学', root_path(ft: '9') %></li>
-    <li class="category-tag"><%= link_to 'コンピュータ・IT', root_path(ft: '10') %></li>
-    <li class="category-tag"><%= link_to 'アート・建築・デザイン', root_path(ft: '11') %></li>
-    <li class="category-tag"><%= link_to '趣味・実用', root_path(ft: '12') %></li>
-    <li class="category-tag"><%= link_to 'スポーツ・アウトドア', root_path(ft: '13') %></li>
-    <li class="category-tag"><%= link_to '資格・検定・就職', root_path(ft: '14') %></li>
-    <li class="category-tag"><%= link_to '暮らし・健康・子育て', root_path(ft: '15') %></li>
-    <li class="category-tag"><%= link_to '旅行ガイド・マップ', root_path(ft: '16') %></li>
-    <li class="category-tag"><%= link_to '語学・辞事典・年鑑', root_path(ft: '17') %></li>
-    <li class="category-tag"><%= link_to '英語学習', root_path(ft: '18') %></li>
-    <li class="category-tag"><%= link_to '教育・学参・受験', root_path(ft: '19') %></li>
-    <li class="category-tag"><%= link_to '絵本・児童書', root_path(ft: '20') %></li>
-    <li class="category-tag"><%= link_to 'コミック・ラノベ・BL', root_path(ft: '21') %></li>
-    <li class="category-tag"><%= link_to 'ライトノベル', root_path(ft: '22') %></li>
-    <li class="category-tag"><%= link_to 'タレント写真集', root_path(ft: '23') %></li>
-    <li class="category-tag"><%= link_to 'ゲーム攻略本', root_path(ft: '24') %></li>
-    <li class="category-tag"><%= link_to 'エンターテイメント', root_path(ft: '25') %></li>
-    <li class="category-tag"><%= link_to '新書・文庫・ノベルス', root_path(ft: '26') %></li>
-    <li class="category-tag"><%= link_to '雑誌', root_path(ft: '27') %></li>
-    <li class="category-tag"><%= link_to '楽譜・スコア・音楽書', root_path(ft: '28') %></li>
-    <li class="category-tag"><%= link_to 'カレンダー・手帳', root_path(ft: '29') %></li>
-    <li class="category-tag"><%= link_to 'ポスター', root_path(ft: '30') %></li>
-    <li class="category-tag"><%= link_to '古本', root_path(ft: '31') %></li>
-    <li class="category-tag"><%= link_to '古書･希少本', root_path(ft: '32') %></li>
-    <li class="category-tag"><%= link_to 'アダルト', root_path(ft: '33') %></li>
-    
-    
-  </ul>
+  <div class="category-list">
+    <% @categories.each do |category| %>
+      <div class='category-tag'>
+        <% @categories = Category.name  %>
+        <%= link_to category.name, root_path(category:  category.id, ft:params[:ft]) %>
+      </div>
+    <%end%>
+  </div>
 
 <hr>
 

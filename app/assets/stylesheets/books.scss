@@ -14,12 +14,12 @@ div.wrapper.book_index, div.wrapper.book_show {
     font-size: 24px;
   }
 
-  ul.category-list {
+  div.category-list {
     font-size: 0px;
     padding: 0;
   }
   
-  li.category-tag {
+  div.category-tag {
     padding: 13px;
     border: 1px solid gray;
     border-radius: 3px;
@@ -27,7 +27,7 @@ div.wrapper.book_index, div.wrapper.book_show {
     display: inline-block;
   }
   
-  li.category-tag a {
+  div.category-tag a {
     color: black;
   }
 
