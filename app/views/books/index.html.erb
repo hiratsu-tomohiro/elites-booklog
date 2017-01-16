@@ -17,6 +17,18 @@
       <hr>
   <% end %>
 
+  <!--seedのマスターデータを参照して全件表示-->
+  <div class="category-list">
+    <% @categories.each do |category| %>
+      <div class='category-tag'>
+        <% @categories = Category.name  %>
+        <%= link_to category.name, root_path(ft: params[:ft]) %>
+      </div>
+    <%end%>
+  </div>
+
+<hr>
+
   <div>
     <%= button_to 'Bookを登録', new_book_path, method: :get, class: 'btn btn-primary' %>
   </div>
